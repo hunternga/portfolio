@@ -15,12 +15,14 @@ import {
 import HeroBackground from "./HeroBackground";
 import AnimatedGradient from "../liquid/AnimatedGradient";
 import NoiseOverlay from "../liquid/NoiseOverlay";
+import LiquidButton from "../liquid/LiquidButton";
+import MouseSpotlight from "../liquid/MouseSpotlight";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
+      className="relative flex min-h-screen items-center overflow-hidden pt-24 bg-[#020617]"
     >
       <AnimatedGradient />
       <NoiseOverlay />
@@ -73,16 +75,13 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-5">
 
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: .95 }}
+            <LiquidButton 
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 font-semibold text-white shadow-xl"
             >
               View Projects
 
               <ArrowRight size={18} />
-            </motion.a>
+            </LiquidButton>
 
             <motion.a
               whileHover={{ scale: 1.05 }}
@@ -121,33 +120,6 @@ export default function Hero() {
 
           </div>
 
-          {/* Stats */}
-
-          <div className="mt-16 grid grid-cols-3 gap-6">
-
-            {[
-              ["10+", "Years"],
-              ["30+", "Projects"],
-              ["15+", "Technologies"],
-            ].map(([number, label]) => (
-              <motion.div
-                whileHover={{
-                  y: -6,
-                }}
-                key={label}
-                className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6 backdrop-blur-xl"
-              >
-                <h2 className="text-4xl font-black text-blue-400">
-                  {number}
-                </h2>
-
-                <p className="mt-2 text-slate-400">
-                  {label}
-                </p>
-              </motion.div>
-            ))}
-
-          </div>
         </motion.div>
 
         {/* RIGHT */}

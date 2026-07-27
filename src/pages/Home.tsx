@@ -8,11 +8,17 @@ import Projects from "../components/sections/Projects";
 import Services from "../components/sections/Services";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/layout/Footer";
+import CursorGlow from "../components/liquid/CursorGlow";
+import FloatingOrbs from "../components/liquid/FloatingOrbs";
+
 
 const Home = () => {
   return (
     <>
-      <MouseGlow />
+    
+      <CursorGlow />
+      <FloatingOrbs />
+      {/* <MouseGlow /> */}
       <Navbar />
       <Hero />
       <About />

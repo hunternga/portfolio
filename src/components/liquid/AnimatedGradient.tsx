@@ -2,23 +2,23 @@ import { motion } from "framer-motion";
 
 const blobs = [
   {
-    size: 550,
-    color: "from-cyan-500/25 to-blue-600/15",
-    x: "-15%",
+    size: 700,
+    color: "from-cyan-400/80 to-blue-500/60",
+    x: "-20%",
     y: "-10%",
-    duration: 22,
+    duration: 18,
   },
   {
-    size: 500,
-    color: "from-purple-500/20 to-pink-500/10",
+    size: 650,
+    color: "from-violet-500/70 to-fuchsia-500/60",
     x: "70%",
-    y: "10%",
-    duration: 28,
+    y: "5%",
+    duration: 24,
   },
   {
-    size: 450,
-    color: "from-blue-500/20 to-indigo-500/10",
-    x: "25%",
+    size: 600,
+    color: "from-sky-400/70 to-indigo-500/60",
+    x: "20%",
     y: "70%",
     duration: 20,
   },
@@ -30,7 +30,7 @@ export default function AnimatedGradient() {
 
       {/* Background */}
 
-      <div className="absolute inset-0 bg-[#020617]" />
+      <div className="" />
 
       {/* Aurora */}
 
@@ -48,7 +48,7 @@ export default function AnimatedGradient() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className={`absolute rounded-full bg-gradient-to-br ${blob.color} blur-[140px]`}
+          className={`absolute rounded-full bg-gradient-to-br ${blob.color} blur-3xl`}
           style={{
             width: blob.size,
             height: blob.size,

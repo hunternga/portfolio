@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import FloatingTech from "./FloatingTech";
+import GlassPanel from "../liquid/GlassPanel";
 import {
     FaCheckCircle,
     FaAward,
@@ -7,7 +8,7 @@ import {
 
 export default function ProfileCard() {
     return (
-        <div className="relative flex items-center justify-center">
+        <div className="relative inset-0 flex items-center justify-center">
 
             {/* Outer Glow */}
             <motion.div
@@ -19,26 +20,26 @@ export default function ProfileCard() {
                     repeat: Infinity,
                     duration: 5,
                 }}
-                className="absolute h-[480px] w-[480px] rounded-full bg-gradient-to-r from-blue-500/20 via-cyan-500/20 to-purple-500/20 blur-[80px]"
+                className="absolute h-72 w-72 rounded-full bg-cyan-500/25 blur-[100px]"
             />
 
             {/* Animated Border */}
             <motion.div
                 animate={{
-                    rotate: 360,
+                    scale: [1, 1.03, 1],
                 }}
                 transition={{
-                    duration: 20,
+                    duration: 4,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: "easeInOut",
                 }}
+
                 className="absolute h-[450px] w-[450px] rounded-full bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 p-[2px]"
             >
                 <div className="h-full w-full rounded-full bg-[#020617]" />
             </motion.div>
-
             {/* Image */}
-            <div className="relative z-20 flex h-[430px] w-[430px] items-center justify-center rounded-full bg-slate-900/70 backdrop-blur-xl">
+            <GlassPanel className="relative z-20 flex h-[430px] w-[430px] items-center justify-center rounded-full bg-slate-900/70 backdrop-blur-xl">
 
                 <motion.img
                     whileHover={{ scale: 1.03 }}
@@ -48,7 +49,7 @@ export default function ProfileCard() {
                     className="h-[370px] w-[370px] rounded-full object-cover border-4 border-slate-700 shadow-[0_20px_60px_rgba(37,99,235,0.35)]"
                 />
 
-            </div>
+            </GlassPanel>
 
             {/* Floating Tech */}
             <FloatingTech />
