@@ -1,42 +1,49 @@
 export const projects = [
   {
-    id: 1,
-    title: "Enterprise ERP",
+    title: "Enterprise ERP System",
     description:
-      "ERP solution with HR, Inventory, Finance and CRM modules.",
+      "A complete ERP platform with HR, Finance, Inventory, CRM and Reporting modules.",
     image: "/projects/erp.jpg",
-    technologies: ["Laravel", "React", "MySQL"],
+    technologies: [
+      "Laravel",
+      "React",
+      "TypeScript",
+      "MySQL",
+      "AWS",
+    ],
     github: "#",
     demo: "#",
+    featured: true,
   },
   {
-    id: 2,
-    title: "FinTech Platform",
+    title: "FinTech Payment Platform",
     description:
-      "Payment gateway and merchant management system.",
+      "Payment processing platform with APIs, settlements and merchant dashboard.",
     image: "/projects/fintech.jpg",
-    technologies: ["PHP", "Laravel", "Redis"],
+    technologies: [
+      "Laravel",
+      "Redis",
+      "Docker",
+      "React",
+      "REST API",
+    ],
     github: "#",
     demo: "#",
+    featured: true,
   },
   {
-    id: 3,
     title: "Real Estate Portal",
     description:
-      "Modern property listing and lead generation platform.",
+      "Modern property listing platform with advanced search, enquiry and analytics.",
     image: "/projects/realestate.jpg",
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: [
+      "React",
+      "Tailwind",
+      "Laravel",
+      "MySQL",
+    ],
     github: "#",
     demo: "#",
-  },
-  {
-    id: 4,
-    title: "AI Assistant",
-    description:
-      "OpenAI-powered chatbot with enterprise integrations.",
-    image: "/projects/ai.jpg",
-    technologies: ["React", "OpenAI", "FastAPI"],
-    github: "#",
-    demo: "#",
+    featured: true,
   },
 ];

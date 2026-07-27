@@ -1,0 +1,63 @@
+export const experiences = [
+  {
+    company: "PDI Software India LLP",
+    role: "Software Engineer III",
+    duration: "Sep 2024 – Present",
+    location: "Chennai, India",
+    technologies: [
+      "Laravel",
+      "React",
+      "TypeScript",
+      "PHP",
+      "MySQL",
+      "AWS",
+      "Redis",
+      "Docker",
+    ],
+    achievements: [
+      "Developed enterprise-level business applications.",
+      "Built scalable REST APIs.",
+      "Optimised application performance.",
+      "Integrated third-party services.",
+    ],
+  },
+  {
+    company: "IndiaFilings Pvt Ltd",
+    role: "Senior Software Engineer",
+    duration: "Aug 2023 – Sep 2024",
+    location: "Chennai, India",
+    technologies: [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "jQuery",
+      "Bootstrap",
+      "REST API",
+    ],
+    achievements: [
+      "Developed ERP modules.",
+      "Implemented payment integrations.",
+      "Created internal automation tools.",
+      "Worked with cross-functional teams.",
+    ],
+  },
+  {
+    company: "Digient Technologies",
+    role: "Senior Software Engineer",
+    duration: "Previous",
+    location: "Chennai, India",
+    technologies: [
+      "Laravel",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "AWS",
+    ],
+    achievements: [
+      "Worked on Telemedicine platforms.",
+      "Gaming integrations.",
+      "CRM & ERP systems.",
+      "E-Commerce solutions.",
+    ],
+  },
+];
