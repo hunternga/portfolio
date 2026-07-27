@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-// import { Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const navItems = [
   { name: "About", to: "about" },

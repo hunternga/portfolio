@@ -9,7 +9,7 @@ interface Project {
   description: string;
   image: string;
   technologies: string[];
-  FaGithub: string;
+  github: string;
   demo: string;
 }
 
