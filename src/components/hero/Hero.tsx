@@ -12,11 +12,9 @@ import {
   Download,
 } from "lucide-react";
 
-import HeroBackground from "./HeroBackground";
 import AnimatedGradient from "../liquid/AnimatedGradient";
 import NoiseOverlay from "../liquid/NoiseOverlay";
 import LiquidButton from "../liquid/LiquidButton";
-import MouseSpotlight from "../liquid/MouseSpotlight";
 
 export default function Hero() {
   return (

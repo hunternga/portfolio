@@ -1,6 +1,5 @@
 import Navbar from "../components/layout/Navbar";
 import Hero from "../components/hero/Hero";
-import MouseGlow from "../components/effects/MouseGlow";
 import About from "../components/sections/About";
 import Experience from "../components/sections/Experience";
 import Skills from "../components/sections/Skills";
