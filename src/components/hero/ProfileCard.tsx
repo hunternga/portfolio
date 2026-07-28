@@ -44,7 +44,7 @@ export default function ProfileCard() {
                 <motion.img
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.3 }}
-                    src="/IMG_4549-pp.jpg"
+                    src="/profile.jpg"
                     alt="Nagarathinam R"
                     className="h-[370px] w-[370px] rounded-full object-cover border-4 border-slate-700 shadow-[0_20px_60px_rgba(37,99,235,0.35)]"
                 />
@@ -52,7 +52,7 @@ export default function ProfileCard() {
             </GlassPanel>
 
             {/* Floating Tech */}
-            <FloatingTech />
+            {/* <FloatingTech /> */}
 
             {/* Hire Badge */}
             <motion.div

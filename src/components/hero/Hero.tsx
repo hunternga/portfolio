@@ -3,10 +3,15 @@ import { TypeAnimation } from "react-type-animation";
 import ScrollIndicator from "./ScrollIndicator";
 import ProfileCard from "./ProfileCard"
 import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
+  FaCloud,
+  FaGamepad,
+  FaCreditCard,
+  FaServer,
 } from "react-icons/fa";
+import {
+  MdPayments,
+  MdBusinessCenter,
+} from "react-icons/md";
 import {
   ArrowRight,
   Download,
@@ -15,6 +20,39 @@ import {
 import AnimatedGradient from "../liquid/AnimatedGradient";
 import NoiseOverlay from "../liquid/NoiseOverlay";
 import LiquidButton from "../liquid/LiquidButton";
+
+const expertise = [
+  {
+    icon: MdBusinessCenter,
+    label: "SaaS",
+    color: "from-violet-500 to-fuchsia-500",
+  },
+  {
+    icon: FaServer,
+    label: "ERP",
+    color: "from-orange-500 to-amber-500",
+  },
+  {
+    icon: FaCloud,
+    label: "Cloud",
+    color: "from-sky-500 to-cyan-500",
+  },
+  {
+    icon: FaCreditCard,
+    label: "FinTech",
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    icon: MdPayments,
+    label: "Payments",
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    icon: FaGamepad,
+    label: "Gaming",
+    color: "from-indigo-500 to-blue-500",
+  },
+];
 
 export default function Hero() {
   return (
@@ -38,12 +76,11 @@ export default function Hero() {
             🚀 Available for Opportunities
           </span> */}
 
-          <h1 className="mt-8 text-5xl font-black leading-tight text-white md:text-7xl">
-            Nagarathinam
+          <h3 className="mt-8 text-4xl font-black leading-tight text-white md:text-7xl">
             <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              R
+              Nagarathinam
             </span>
-          </h1>
+          </h3>
 
           <div className="mt-6 text-2xl font-semibold text-slate-300 md:text-3xl">
             <TypeAnimation
@@ -63,17 +100,14 @@ export default function Hero() {
           </div>
 
           <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
-            Building scalable enterprise applications,
-            FinTech platforms, REST APIs and modern web
-            experiences using Laravel, React,
-            TypeScript and Cloud technologies.
+            I build scalable, secure, and user-centric software that transforms complex business challenges into elegant digital solutions. With 10+ years of experience, I focus on creating enterprise-grade applications that combine performance, reliability, and exceptional user experiences.
           </p>
 
           {/* Buttons */}
 
-          <div className="mt-10 flex flex-wrap gap-5">
+          {/* <div className="mt-10 flex flex-wrap gap-5">
 
-            <LiquidButton 
+            <LiquidButton
               href="#projects"
             >
               View Projects
@@ -92,31 +126,55 @@ export default function Hero() {
               Resume
             </motion.a>
 
-          </div>
+          </div> */}
 
           {/* Social */}
-
-          <div className="mt-10 flex gap-5">
-
-            {[
-              FaGithub,
-              FaLinkedin,
-              FaEnvelope,
-            ].map((Icon, index) => (
-              <motion.a
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            {expertise.map(({ icon: Icon, label, color }) => (
+              <motion.div
+                key={label}
                 whileHover={{
-                  scale: 1.15,
-                  y: -4,
+                  y: -6,
+                  scale: 1.08,
                 }}
-                key={index}
-                href="#"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/60 text-lg text-slate-300 backdrop-blur-xl transition hover:border-blue-500 hover:text-white"
+                whileTap={{ scale: 0.95 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 350,
+                  damping: 18,
+                }}
+                className="
+        group
+        relative
+        overflow-hidden
+        rounded-full
+        border
+        border-white/10
+        bg-white/5
+        backdrop-blur-2xl
+        shadow-lg
+      "
               >
-                <Icon />
-              </motion.a>
-            ))}
+                {/* Glow */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${color} opacity-10 blur-xl group-hover:opacity-25 transition`}
+                />
 
+                <div className="relative flex items-center gap-3 px-4 py-2">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${color} text-white shadow-lg`}
+                  >
+                    <Icon className="text-lg" />
+                  </div>
+
+                  <span className="font-medium tracking-wide text-white">
+                    {label}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
 
         </motion.div>
 

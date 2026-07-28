@@ -14,7 +14,7 @@ import FloatingOrbs from "../components/liquid/FloatingOrbs";
 const Home = () => {
   return (
     <>
-    
+
       <CursorGlow />
       <FloatingOrbs />
       {/* <MouseGlow /> */}
@@ -22,8 +22,8 @@ const Home = () => {
       <Hero />
       <About />
       <Experience />
-      <Skills />
       <Projects />
+      <Skills />
       <Services />
       <Contact />
       <Footer />

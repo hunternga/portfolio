@@ -69,10 +69,13 @@ export default function About() {
           </p>
 
           <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Building Modern Digital
+            Enterprise software, crafted with 
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               {" "}
-              Experiences
+              precision
+
+
+              
             </span>
           </h2>
 

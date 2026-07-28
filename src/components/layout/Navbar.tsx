@@ -93,7 +93,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="text-xl font-black tracking-tight text-white"
             >
-              NR.
+              Nagarathinam R
             </motion.button>
 
             {/* Desktop */}
@@ -116,7 +116,7 @@ export default function Navbar() {
             <div className="hidden items-center gap-3 lg:flex">
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://github.com/"
+                href="https://github.com/hunternga/"
                 target="_blank"
                 className="rounded-full bg-white/5 p-2 text-slate-300 hover:bg-white/10"
               >
@@ -125,7 +125,7 @@ export default function Navbar() {
 
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/nagarathinamr8/"
                 target="_blank"
                 className="rounded-full bg-white/5 p-2 text-slate-300 hover:bg-white/10"
               >
@@ -136,7 +136,7 @@ export default function Navbar() {
                 whileHover={{
                   scale: 1.05,
                 }}
-                href="/resume.pdf"
+                href="/Nagarathinam-Resume.pdf"
                 className="ml-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-2 text-sm font-semibold text-white"
               >
                 <span className="flex items-center gap-2">

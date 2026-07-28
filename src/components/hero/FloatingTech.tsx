@@ -76,9 +76,9 @@ export default function FloatingTech() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className={`absolute ${tech.position} hidden md:flex`}
+            className={`absolute z-20 ${tech.position} hidden md:flex`}
           >
-            <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/70 px-4 py-3 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all">
+            <div className="flex z-20 items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/70 px-4 py-3 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all">
 
               <div
                 className={`flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 ${tech.color}`}
