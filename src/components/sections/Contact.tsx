@@ -3,13 +3,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  Send
 } from "lucide-react";
-import {
-  FaGithub,
-  FaLinkedin
-} from "react-icons/fa";
-
+import { FaWhatsapp } from "react-icons/fa";
 export default function Contact() {
   return (
     <section
@@ -54,82 +49,124 @@ export default function Contact() {
           {/* Left */}
 
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
+  initial={{ opacity: 0, x: -40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  className="space-y-5"
+>
+  <h3 className="text-2xl font-semibold text-white">
+    Get in touch
+  </h3>
 
-            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 backdrop-blur-xl">
+  <p className="max-w-md leading-7 text-slate-400">
+    Whether you're hiring, building a new product, or looking for technical
+    guidance, I'd be happy to discuss how I can help.
+  </p>
 
-              <h3 className="mb-8 text-3xl font-bold text-white">
-                Contact Information
-              </h3>
+  <div className="space-y-4 mt-8">
 
-              <div className="space-y-6">
+    {/* Email */}
+    <a
+      href="mailto:nagarathinamr8@gmail.com"
+      className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-5 transition hover:border-blue-400/40 hover:bg-white/10"
+    >
+      <div className="flex items-center gap-4">
+        <div className="rounded-xl bg-cyan-500/10 p-3">
+          <Mail className="h-5 w-5 text-blue-400" />
+        </div>
 
-                <div className="flex items-center gap-5">
-                  <div className="rounded-2xl bg-blue-500/10 p-4">
-                    <Mail className="text-blue-400" />
-                  </div>
+        <div>
+          <p className="text-sm text-slate-500">
+            Email
+          </p>
 
-                  <div>
-                    <p className="text-slate-400">Email</p>
-                    <p className="text-white">
-                      your@email.com
-                    </p>
-                  </div>
-                </div>
+          <p className="font-medium text-white">
+            nagarathinamr8@gmail.com
+          </p>
+        </div>
+      </div>
 
-                <div className="flex items-center gap-5">
-                  <div className="rounded-2xl bg-blue-500/10 p-4">
-                    <Phone className="text-blue-400" />
-                  </div>
+      <span className="text-slate-500 transition group-hover:text-white">
+        →
+      </span>
+    </a>
 
-                  <div>
-                    <p className="text-slate-400">Phone</p>
-                    <p className="text-white">
-                      +91 XXXXX XXXXX
-                    </p>
-                  </div>
-                </div>
+    {/* Phone */}
+    <a
+      href="tel:+919094500426"
+      className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-5 transition hover:border-violet-400/40 hover:bg-white/10"
+    >
+      <div className="flex items-center gap-4">
+        <div className="rounded-xl bg-cyan-500/10 p-3">
+          <Phone className="h-5 w-5 text-violet-400" />
+        </div>
 
-                <div className="flex items-center gap-5">
-                  <div className="rounded-2xl bg-blue-500/10 p-4">
-                    <MapPin className="text-blue-400" />
-                  </div>
+        <div>
+          <p className="text-sm text-slate-500">
+            Phone
+          </p>
 
-                  <div>
-                    <p className="text-slate-400">Location</p>
-                    <p className="text-white">
-                      Chennai, Tamil Nadu, India
-                    </p>
-                  </div>
-                </div>
+          <p className="font-medium text-white">
+            +91 90945 00426
+          </p>
+        </div>
+      </div>
 
-              </div>
+      <span className="text-slate-500 transition group-hover:text-white">
+        →
+      </span>
+    </a>
 
-              <div className="mt-10 flex gap-4">
+<a
+  href="https://wa.me/919094500426"
+  target="_blank"
+  rel="noreferrer"
+  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-5 transition hover:border-green-500/40 hover:bg-white/10"
+>
+  <div className="flex items-center gap-4">
+    <div className="rounded-xl bg-green-500/10 p-3">
+      <FaWhatsapp className="h-5 w-5 text-green-400" />
+    </div>
 
-                <a
-                  href="#"
-                  className="rounded-xl border border-slate-700 p-4 text-slate-300 transition hover:border-blue-500 hover:text-white"
-                >
-                  <FaGithub size={22} />
-                </a>
+    <div>
+      <p className="text-sm text-slate-500">
+        WhatsApp
+      </p>
 
-                <a
-                  href="#"
-                  className="rounded-xl border border-slate-700 p-4 text-slate-300 transition hover:border-blue-500 hover:text-white"
-                >
-                  <FaLinkedin size={22} />
-                </a>
+      <p className="font-medium text-white">
+        Chat with me
+      </p>
+    </div>
+  </div>
 
-              </div>
+  <span className="text-slate-500 transition group-hover:text-white">
+    →
+  </span>
+</a>
 
-            </div>
+    {/* Location */}
+    <div
+      className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-5"
+    >
+      <div className="flex items-center gap-4">
+        <div className="rounded-xl bg-cyan-500/10 p-3">
+          <MapPin className="h-5 w-5 text-cyan-400" />
+        </div>
 
-          </motion.div>
+        <div>
+          <p className="text-sm text-slate-500">
+            Location
+          </p>
+
+          <p className="font-medium text-white">
+            Chennai, Tamil Nadu, India
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</motion.div>
 
           {/* Right */}
 
@@ -137,49 +174,94 @@ export default function Contact() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 backdrop-blur-xl"
+            className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-2xl"
           >
-
-            <h3 className="mb-8 text-3xl font-bold text-white">
-              Send a Message
+            <h3 className="text-2xl font-semibold text-white">
+              Let's talk
             </h3>
 
-            <div className="space-y-5">
+            <p className="mt-2 text-slate-400">
+              Tell me about your project or opportunity.
+            </p>
+
+            <div className="mt-8 space-y-5">
 
               <input
                 type="text"
-                placeholder="Your Name"
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-5 py-4 text-white outline-none transition focus:border-blue-500"
+                placeholder="Name"
+                className="
+        w-full
+        rounded-xl
+        border
+        border-white/10
+        bg-transparent
+        px-4
+        py-3.5
+        text-white
+        placeholder:text-slate-500
+        outline-none
+        transition
+        focus:border-cyan-400
+      "
               />
 
               <input
                 type="email"
-                placeholder="Your Email"
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-5 py-4 text-white outline-none transition focus:border-blue-500"
-              />
-
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-5 py-4 text-white outline-none transition focus:border-blue-500"
+                placeholder="Email"
+                className="
+        w-full
+        rounded-xl
+        border
+        border-white/10
+        bg-transparent
+        px-4
+        py-3.5
+        text-white
+        placeholder:text-slate-500
+        outline-none
+        transition
+        focus:border-cyan-400
+      "
               />
 
               <textarea
-                rows={6}
-                placeholder="Tell me about your project..."
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-5 py-4 text-white outline-none transition focus:border-blue-500"
+                rows={5}
+                placeholder="Message"
+                className="
+        w-full
+        resize-none
+        rounded-xl
+        border
+        border-white/10
+        bg-transparent
+        px-4
+        py-3.5
+        text-white
+        placeholder:text-slate-500
+        outline-none
+        transition
+        focus:border-cyan-400
+      "
               />
 
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 py-4 text-lg font-semibold text-white transition hover:scale-[1.02]"
+                className="
+        mt-2
+        w-full
+        rounded-xl
+        bg-white
+        py-3.5
+        font-medium
+        text-slate-900
+        transition
+        hover:bg-slate-200
+      "
               >
-                <Send size={20} />
                 Send Message
               </button>
 
             </div>
-
           </motion.form>
 
         </div>

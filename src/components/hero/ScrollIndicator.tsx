@@ -20,7 +20,7 @@ export default function ScrollIndicator() {
           Scroll
         </span>
 
-        <div className="flex h-14 w-8 justify-center rounded-full border border-slate-600">
+        <div className="flex h-14 w-8 justify-center rounded-full border">
 
           <motion.div
             animate={{
