@@ -12,14 +12,9 @@ import {
   MdPayments,
   MdBusinessCenter,
 } from "react-icons/md";
-import {
-  ArrowRight,
-  Download,
-} from "lucide-react";
 
 import AnimatedGradient from "../liquid/AnimatedGradient";
 import NoiseOverlay from "../liquid/NoiseOverlay";
-import LiquidButton from "../liquid/LiquidButton";
 
 const expertise = [
   {

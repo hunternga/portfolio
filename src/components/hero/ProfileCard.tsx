@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import FloatingTech from "./FloatingTech";
 import GlassPanel from "../liquid/GlassPanel";
 import {
     FaCheckCircle,
