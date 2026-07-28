@@ -12,75 +12,44 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: Code2,
-    skills: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Bootstrap",
-      "jQuery",
-    ],
+    color: "from-cyan-500 to-blue-600",
+    glow: "shadow-cyan-500/30",
+    skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "jQuery"],
   },
   {
     title: "Backend",
     icon: Server,
-    skills: [
-      "PHP",
-      "Laravel",
-      "CodeIgniter",
-      "Node.js",
-      "REST API",
-      "JWT",
-    ],
+    color: "from-violet-500 to-purple-600",
+    glow: "shadow-violet-500/30",
+    skills: ["PHP", "Laravel", "CodeIgniter", "Node.js", "REST API", "JWT"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: [
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB",
-      "SQLite",
-      "Redis",
-    ],
+    color: "from-emerald-500 to-green-600",
+    glow: "shadow-emerald-500/30",
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Redis"],
   },
   {
     title: "Cloud & DevOps",
     icon: Cloud,
-    skills: [
-      "AWS",
-      "Docker",
-      "Git",
-      "GitHub",
-      "Bitbucket",
-      "Linux",
-    ],
+    color: "from-orange-500 to-red-500",
+    glow: "shadow-orange-500/30",
+    skills: ["AWS", "Docker", "Git", "GitHub", "Bitbucket", "Linux"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    skills: [
-      "VS Code",
-      "Postman",
-      "Figma",
-      "Jira",
-      "Composer",
-      "NPM",
-    ],
+    color: "from-pink-500 to-rose-500",
+    glow: "shadow-pink-500/30",
+    skills: ["VS Code", "Postman", "Figma", "Jira", "Composer", "NPM"],
   },
   {
     title: "Other Expertise",
     icon: BrainCircuit,
-    skills: [
-      "ERP",
-      "CRM",
-      "FinTech",
-      "AI Integration",
-      "Payment Gateway",
-      "System Design",
-    ],
+    color: "from-yellow-400 to-amber-500",
+    glow: "shadow-yellow-500/30",
+    skills: ["ERP", "CRM", "FinTech", "AI Integration", "Payment Gateway", "System Design"],
   },
 ];
 
@@ -130,44 +99,50 @@ export default function Skills() {
 
             return (
               <motion.div
-                key={category.title}
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
-                }}
-                whileHover={{
-                  y: -8,
-                }}
-                className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 backdrop-blur-xl transition-all hover:border-blue-500/40"
-              >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400">
-                  <Icon size={30} />
-                </div>
+  key={category.title}
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: index * 0.08 }}
+  whileHover={{ y: -12, scale: 1.02 }}
+  className={`group relative overflow-hidden rounded-[30px] bg-slate-900 p-8 border border-white/10 transition-all duration-500 hover:shadow-2xl ${category.glow}`}
+>
+  {/* Gradient Background */}
+  <div
+    className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-10 transition duration-500 group-hover:opacity-20`}
+  />
 
-                <h3 className="mb-6 text-2xl font-bold text-white">
-                  {category.title}
-                </h3>
+  {/* Decorative Circle */}
+  <div
+    className={`absolute -right-10 -top-10 h-36 w-36 rounded-full bg-gradient-to-br ${category.color} opacity-20 blur-3xl`}
+  />
 
-                <div className="flex flex-wrap gap-3">
-                  {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-slate-700 bg-slate-800/70 px-4 py-2 text-sm font-medium text-slate-300 transition hover:border-blue-500 hover:bg-blue-500/10 hover:text-blue-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+  <div className="relative z-10">
+    {/* Icon */}
+    <div
+      className={`mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} text-white shadow-lg`}
+    >
+      <Icon size={30} />
+    </div>
+
+    {/* Title */}
+    <h3 className="mb-6 text-2xl font-bold text-white">
+      {category.title}
+    </h3>
+
+    {/* Skills */}
+    <div className="flex flex-wrap gap-3">
+      {category.skills.map((skill) => (
+        <span
+          key={skill}
+          className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
+</motion.div>
             );
           })}
 

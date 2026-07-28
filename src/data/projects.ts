@@ -35,7 +35,7 @@ export const projects = [
     title: "Real Estate Portal",
     description:
       "Modern property listing platform with advanced search, enquiry and analytics.",
-    image: "/projects/realestate.jpg",
+    image: "/projects/sqftbroker.png",
     technologies: [
       "React",
       "Tailwind",
@@ -43,7 +43,7 @@ export const projects = [
       "MySQL",
     ],
     github: "#",
-    demo: "#",
+    demo: "https://www.sqftbroker.com/",
     featured: true,
   },
 ];
